@@ -1,0 +1,37 @@
+import java.awt.*;
+
+public class MyMenuDemo {
+    public static void main(String[] args) {
+        Frame frame =new Frame();
+        frame.setVisible(true);
+        frame.setSize(200,200);
+        frame.setVisible(true);
+
+        MenuBar mb = new MenuBar();
+        Menu fileMenu = new Menu("file");
+        Menu editMenu = new Menu("edit");
+        Menu sourceMenu = new Menu("source");
+
+        MenuItem fm1 = new MenuItem("new");
+        MenuItem fm2 = new MenuItem("open");
+
+        Menu recentMenu = new Menu("Recent");
+
+        MenuItem fm3a = new MenuItem("file");
+        MenuItem fm3b = new MenuItem("project");
+        MenuItem fm3c = new MenuItem("workshop");
+
+        recentMenu.add(fm3a);
+        recentMenu.add(fm3b);
+        recentMenu.add(fm3c);
+
+        fileMenu.add(fm1);
+        fileMenu.add(fm2);
+        fileMenu.add(recentMenu);
+
+        mb.add(fileMenu);
+        mb.add(editMenu);
+        mb.add(sourceMenu);
+        frame.setMenuBar(mb);
+    }
+}
