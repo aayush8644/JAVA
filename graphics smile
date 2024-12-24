@@ -1,0 +1,32 @@
+package graphics;
+
+import java.awt.Color;
+import java.awt.Frame;
+import java.awt.Graphics;
+
+public class smiley extends Frame {
+
+    public smiley() {
+        setTitle("SMILEY");
+        setSize(400, 400);
+        setVisible(true);
+    }
+
+    public void paint(Graphics g) {
+        // Draw the face
+        g.setColor(Color.yellow);
+        g.fillOval(50, 50, 200, 200);
+
+        // Draw the eyes
+        g.setColor(Color.black);
+        g.fillOval(90, 110, 30, 30);  // Left eye
+        g.fillOval(180, 110, 30, 30); // Right eye
+
+        // Draw the smile
+        g.drawLine(120, 180, 180, 180); // Mouth
+    }
+
+    public static void main(String[] args) {
+        new smiley(); // Create the smiley face window
+    }
+}
